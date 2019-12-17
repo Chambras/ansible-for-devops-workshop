@@ -1,0 +1,10 @@
+---
+- name: Deploy site web infrastructure
+  hosts: all
+  become: yes
+  vars:
+    ntp_servers:
+    - "time.google.com"
+
+  roles:
+    - geerlingguy.ntp
